@@ -1,0 +1,26 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "S06Food_Payment"; //A new package created for this service
+option java_outer_classname = "S06FoodPayment_1"; //This name will be used in the new generated documents
+package cinema2;
+
+
+service PaymentService {
+  // Bidirectional streaming RPC
+  rpc ProcessPayment(stream PaymentRequest) returns (stream PaymentResponse);
+}
+
+// Message for sending payment details
+message PaymentRequest {
+  string card_number = 1;
+  string cardholder = 2;
+  string security_number = 3;
+  string issue_date = 4;
+}
+
+// Message for receiving payment response
+message PaymentResponse {
+  string message = 1;
+  string confirmation_number = 2;
+  string ticket_number = 3;
+}

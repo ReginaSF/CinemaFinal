@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "S05Drink_Catalog"; // Package name for generated Java files
+option java_outer_classname = "S05DrinkCatalog"; // Outer class name for generated Java files
+package artifact_cinema;
+
+// Request message containing a list of drink IDs //server Streaming.
+message DrinkRequest {
+  repeated int32 drink_ids = 1; // List of drink IDs chosen by the client
+}
+
+// Response message with the availability confirmation for each drink
+message DrinkResponse {
+  int32 drink_id = 1; // ID of the drink
+  string confirmation_message = 2; // Confirmation message about the drink
+}
+
+// Service definition
+service DrinkService {
+  // Server streaming RPC to offer drinks based on the requested list
+  rpc OfferDrinks(DrinkRequest) returns (stream DrinkResponse);
+}

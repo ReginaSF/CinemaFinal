@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "S01Seat_Heating";
+option java_outer_classname = "Serv01Seat_Heating";
+
+package Artifact_cinema;
+
+// Interface exported by the server.
+// This service is called SeatTemperature in the proposal document.
+service CinemaImmersive {
+  // Activates the heating of a seat.
+  rpc ActivateHeating (ActivateRequest) returns (ActivateResponse) {}
+}
+
+// Request message for ActivateHeating RPC.
+message ActivateRequest {
+  // Name of the seat to be heated.
+  string name = 1;
+}
+
+// Response message for ActivateHeating RPC.
+message ActivateResponse {
+  // Confirmation message.
+  string message = 1;
+}
+

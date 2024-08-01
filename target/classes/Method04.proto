@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "S04Cinema_Admission"; //A new package created for this service
+option java_outer_classname = "S04CinemaAdmission"; //This name will be used in the new generated documents
+package cinema2;
+
+
+service TicketService {
+  // Client-side streaming RPC
+  rpc EnterTicketNumber (stream TicketRequest) returns (TicketResponse);
+}
+
+// Request message containing ticket number and name
+message TicketRequest {
+  int32 ticket_number = 1;
+  string name = 2;
+}
+
+// Response message indicating if the ticket is accepted
+message TicketResponse {
+  bool accepted = 1;
+  string message = 2;
+}

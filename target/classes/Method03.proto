@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "S03Cinema_Lights"; //A new package created for this service
+option java_outer_classname = "S03CinemaLights"; //This name will be used in the new generated documents
+
+
+ // this rpc is based on client streaming, asking to the cinema supervisor to manage the lights of the hall
+service CinemaLightsService {
+  // A client streaming RPC for controlling lights
+  rpc ControlLights(stream LightsRequest) returns (LightsResponse);
+}
+
+// The request message containing the cinema room number and instruction "activate lights or lights off "
+message LightsRequest {
+  string room_number = 1; // Cinema room number
+  string command = 2;     // Command to either activate or turn off lights
+}
+
+// The response message containing the status of the operation
+message LightsResponse {
+  string status = 1;      // Status message such as "Lights on" or "Lights off"
+}

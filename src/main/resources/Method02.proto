@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "S02Seat_Water"; // Package name for generated Java files
+option java_outer_classname = "Serv02Seat_Water"; // Outer class name for generated Java files
+
+package cinema2;
+
+// Service definition
+service S02SeatWater {
+  // Unary RPC method to activate the water immersive feature
+  rpc ActivateWaterImmersiveFeature (ActivateRequest) returns (ActivateResponse);
+}
+
+// Request message for the ActivateWaterImmersiveFeature RPC
+message ActivateRequest {
+  // User's choice to activate or deactivate the feature
+  string choice = 1; // Possible values: "yes" or "no"
+}
+
+// Response message for the ActivateWaterImmersiveFeature RPC
+message ActivateResponse {
+  // Message to inform the user about the change
+  string message = 1;
+}
