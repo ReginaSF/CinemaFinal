@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ *ClientStreaming rpc. User will enter all the data to check if the ticket is valid 
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
@@ -83,13 +86,13 @@ public final class TicketServiceGrpc {
   }
 
   /**
+   * <pre>
+   *ClientStreaming rpc. User will enter all the data to check if the ticket is valid 
+   * </pre>
    */
   public static abstract class TicketServiceImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * Client-side streaming RPC
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S04Cinema_Admission.TicketRequest> enterTicketNumber(
         io.grpc.stub.StreamObserver<S04Cinema_Admission.TicketResponse> responseObserver) {
@@ -110,6 +113,9 @@ public final class TicketServiceGrpc {
   }
 
   /**
+   * <pre>
+   *ClientStreaming rpc. User will enter all the data to check if the ticket is valid 
+   * </pre>
    */
   public static final class TicketServiceStub extends io.grpc.stub.AbstractStub<TicketServiceStub> {
     private TicketServiceStub(io.grpc.Channel channel) {
@@ -128,9 +134,6 @@ public final class TicketServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Client-side streaming RPC
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S04Cinema_Admission.TicketRequest> enterTicketNumber(
         io.grpc.stub.StreamObserver<S04Cinema_Admission.TicketResponse> responseObserver) {
@@ -140,6 +143,9 @@ public final class TicketServiceGrpc {
   }
 
   /**
+   * <pre>
+   *ClientStreaming rpc. User will enter all the data to check if the ticket is valid 
+   * </pre>
    */
   public static final class TicketServiceBlockingStub extends io.grpc.stub.AbstractStub<TicketServiceBlockingStub> {
     private TicketServiceBlockingStub(io.grpc.Channel channel) {
@@ -159,6 +165,9 @@ public final class TicketServiceGrpc {
   }
 
   /**
+   * <pre>
+   *ClientStreaming rpc. User will enter all the data to check if the ticket is valid 
+   * </pre>
    */
   public static final class TicketServiceFutureStub extends io.grpc.stub.AbstractStub<TicketServiceFutureStub> {
     private TicketServiceFutureStub(io.grpc.Channel channel) {

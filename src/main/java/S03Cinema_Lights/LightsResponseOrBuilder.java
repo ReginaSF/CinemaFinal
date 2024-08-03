@@ -4,7 +4,7 @@
 package S03Cinema_Lights;
 
 public interface LightsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:LightsResponse)
+    // @@protoc_insertion_point(interface_extends:cinema2.LightsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

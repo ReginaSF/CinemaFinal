@@ -4,9 +4,8 @@ option java_package = "S06Food_Payment"; //A new package created for this servic
 option java_outer_classname = "S06FoodPayment_1"; //This name will be used in the new generated documents
 package cinema2;
 
-
-service PaymentService {
   // Bidirectional streaming RPC
+service PaymentService {
   rpc ProcessPayment(stream PaymentRequest) returns (stream PaymentResponse);
 }
 

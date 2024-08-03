@@ -5,7 +5,7 @@ package S05Drink_Catalog;
 
 /**
  * <pre>
- * Request message containing a list of drink IDs //server Streaming.
+ * Request message containing a list of drink IDs server Streaming. This rpc is to show a list of drinks and 
  * </pre>
  *
  * Protobuf type {@code artifact_cinema.DrinkRequest}
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Request message containing a list of drink IDs //server Streaming.
+   * Request message containing a list of drink IDs server Streaming. This rpc is to show a list of drinks and 
    * </pre>
    *
    * Protobuf type {@code artifact_cinema.DrinkRequest}

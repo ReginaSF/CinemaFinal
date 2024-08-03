@@ -24,4 +24,3 @@ message ActivateResponse {
   // Confirmation message.
   string message = 1;
 }
-

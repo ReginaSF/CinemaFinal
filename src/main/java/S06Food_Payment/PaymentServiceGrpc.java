@@ -16,6 +16,9 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
+ * <pre>
+ * Bidirectional streaming RPC
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.15.0)",
@@ -83,13 +86,13 @@ public final class PaymentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Bidirectional streaming RPC
+   * </pre>
    */
   public static abstract class PaymentServiceImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * Bidirectional streaming RPC
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S06Food_Payment.PaymentRequest> processPayment(
         io.grpc.stub.StreamObserver<S06Food_Payment.PaymentResponse> responseObserver) {
@@ -110,6 +113,9 @@ public final class PaymentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Bidirectional streaming RPC
+   * </pre>
    */
   public static final class PaymentServiceStub extends io.grpc.stub.AbstractStub<PaymentServiceStub> {
     private PaymentServiceStub(io.grpc.Channel channel) {
@@ -128,9 +134,6 @@ public final class PaymentServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Bidirectional streaming RPC
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S06Food_Payment.PaymentRequest> processPayment(
         io.grpc.stub.StreamObserver<S06Food_Payment.PaymentResponse> responseObserver) {
@@ -140,6 +143,9 @@ public final class PaymentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Bidirectional streaming RPC
+   * </pre>
    */
   public static final class PaymentServiceBlockingStub extends io.grpc.stub.AbstractStub<PaymentServiceBlockingStub> {
     private PaymentServiceBlockingStub(io.grpc.Channel channel) {
@@ -159,6 +165,9 @@ public final class PaymentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Bidirectional streaming RPC
+   * </pre>
    */
   public static final class PaymentServiceFutureStub extends io.grpc.stub.AbstractStub<PaymentServiceFutureStub> {
     private PaymentServiceFutureStub(io.grpc.Channel channel) {

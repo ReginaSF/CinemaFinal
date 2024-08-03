@@ -4,7 +4,7 @@
 package S03Cinema_Lights;
 
 public interface LightsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:LightsRequest)
+    // @@protoc_insertion_point(interface_extends:cinema2.LightsRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -15,15 +15,15 @@ public final class S03CinemaLights {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LightsRequest_descriptor;
+    internal_static_cinema2_LightsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LightsRequest_fieldAccessorTable;
+      internal_static_cinema2_LightsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_LightsResponse_descriptor;
+    internal_static_cinema2_LightsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_LightsResponse_fieldAccessorTable;
+      internal_static_cinema2_LightsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,12 +33,13 @@ public final class S03CinemaLights {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016Method03.proto\"5\n\rLightsRequest\022\023\n\013roo" +
-      "m_number\030\001 \001(\t\022\017\n\007command\030\002 \001(\t\" \n\016Light" +
-      "sResponse\022\016\n\006status\030\001 \001(\t2I\n\023CinemaLight" +
-      "sService\0222\n\rControlLights\022\016.LightsReques" +
-      "t\032\017.LightsResponse(\001B%\n\020S03Cinema_Lights" +
-      "B\017S03CinemaLightsP\001b\006proto3"
+      "\n\016Method03.proto\022\007cinema2\"5\n\rLightsReque" +
+      "st\022\023\n\013room_number\030\001 \001(\t\022\017\n\007command\030\002 \001(\t" +
+      "\" \n\016LightsResponse\022\016\n\006status\030\001 \001(\t2Y\n\023Ci" +
+      "nemaLightsService\022B\n\rControlLights\022\026.cin" +
+      "ema2.LightsRequest\032\027.cinema2.LightsRespo" +
+      "nse(\001B%\n\020S03Cinema_LightsB\017S03CinemaLigh" +
+      "tsP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -52,17 +53,17 @@ public final class S03CinemaLights {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_LightsRequest_descriptor =
+    internal_static_cinema2_LightsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_LightsRequest_fieldAccessorTable = new
+    internal_static_cinema2_LightsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LightsRequest_descriptor,
+        internal_static_cinema2_LightsRequest_descriptor,
         new java.lang.String[] { "RoomNumber", "Command", });
-    internal_static_LightsResponse_descriptor =
+    internal_static_cinema2_LightsResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_LightsResponse_fieldAccessorTable = new
+    internal_static_cinema2_LightsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_LightsResponse_descriptor,
+        internal_static_cinema2_LightsResponse_descriptor,
         new java.lang.String[] { "Status", });
   }
 

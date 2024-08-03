@@ -17,7 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Service definition
+ * Unary RPC method to activate the water immersive feature
  * </pre>
  */
 @javax.annotation.Generated(
@@ -87,15 +87,12 @@ public final class S02SeatWaterGrpc {
 
   /**
    * <pre>
-   * Service definition
+   * Unary RPC method to activate the water immersive feature
    * </pre>
    */
   public static abstract class S02SeatWaterImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * Unary RPC method to activate the water immersive feature
-     * </pre>
      */
     public void activateWaterImmersiveFeature(S02Seat_Water.ActivateRequest request,
         io.grpc.stub.StreamObserver<S02Seat_Water.ActivateResponse> responseObserver) {
@@ -117,7 +114,7 @@ public final class S02SeatWaterGrpc {
 
   /**
    * <pre>
-   * Service definition
+   * Unary RPC method to activate the water immersive feature
    * </pre>
    */
   public static final class S02SeatWaterStub extends io.grpc.stub.AbstractStub<S02SeatWaterStub> {
@@ -137,9 +134,6 @@ public final class S02SeatWaterGrpc {
     }
 
     /**
-     * <pre>
-     * Unary RPC method to activate the water immersive feature
-     * </pre>
      */
     public void activateWaterImmersiveFeature(S02Seat_Water.ActivateRequest request,
         io.grpc.stub.StreamObserver<S02Seat_Water.ActivateResponse> responseObserver) {
@@ -150,7 +144,7 @@ public final class S02SeatWaterGrpc {
 
   /**
    * <pre>
-   * Service definition
+   * Unary RPC method to activate the water immersive feature
    * </pre>
    */
   public static final class S02SeatWaterBlockingStub extends io.grpc.stub.AbstractStub<S02SeatWaterBlockingStub> {
@@ -170,9 +164,6 @@ public final class S02SeatWaterGrpc {
     }
 
     /**
-     * <pre>
-     * Unary RPC method to activate the water immersive feature
-     * </pre>
      */
     public S02Seat_Water.ActivateResponse activateWaterImmersiveFeature(S02Seat_Water.ActivateRequest request) {
       return blockingUnaryCall(
@@ -182,7 +173,7 @@ public final class S02SeatWaterGrpc {
 
   /**
    * <pre>
-   * Service definition
+   * Unary RPC method to activate the water immersive feature
    * </pre>
    */
   public static final class S02SeatWaterFutureStub extends io.grpc.stub.AbstractStub<S02SeatWaterFutureStub> {
@@ -202,9 +193,6 @@ public final class S02SeatWaterGrpc {
     }
 
     /**
-     * <pre>
-     * Unary RPC method to activate the water immersive feature
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<S02Seat_Water.ActivateResponse> activateWaterImmersiveFeature(
         S02Seat_Water.ActivateRequest request) {

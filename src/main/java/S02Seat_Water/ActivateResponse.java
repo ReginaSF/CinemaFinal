@@ -5,7 +5,7 @@ package S02Seat_Water;
 
 /**
  * <pre>
- * Response message for the ActivateWaterImmersiveFeature RPC
+ * Response message for the ActivateWaterImmersiveFeature RPC method
  * </pre>
  *
  * Protobuf type {@code cinema2.ActivateResponse}
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Response message for the ActivateWaterImmersiveFeature RPC
+   * Response message for the ActivateWaterImmersiveFeature RPC method
    * </pre>
    *
    * Protobuf type {@code cinema2.ActivateResponse}

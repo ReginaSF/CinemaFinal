@@ -27,7 +27,7 @@ public final class CinemaLightsServiceGrpc {
 
   private CinemaLightsServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "CinemaLightsService";
+  public static final String SERVICE_NAME = "cinema2.CinemaLightsService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<S03Cinema_Lights.LightsRequest,
@@ -48,7 +48,7 @@ public final class CinemaLightsServiceGrpc {
               io.grpc.MethodDescriptor.<S03Cinema_Lights.LightsRequest, S03Cinema_Lights.LightsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "CinemaLightsService", "ControlLights"))
+                  "cinema2.CinemaLightsService", "ControlLights"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   S03Cinema_Lights.LightsRequest.getDefaultInstance()))
@@ -93,9 +93,6 @@ public final class CinemaLightsServiceGrpc {
   public static abstract class CinemaLightsServiceImplBase implements io.grpc.BindableService {
 
     /**
-     * <pre>
-     * A client streaming RPC for controlling lights
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S03Cinema_Lights.LightsRequest> controlLights(
         io.grpc.stub.StreamObserver<S03Cinema_Lights.LightsResponse> responseObserver) {
@@ -137,9 +134,6 @@ public final class CinemaLightsServiceGrpc {
     }
 
     /**
-     * <pre>
-     * A client streaming RPC for controlling lights
-     * </pre>
      */
     public io.grpc.stub.StreamObserver<S03Cinema_Lights.LightsRequest> controlLights(
         io.grpc.stub.StreamObserver<S03Cinema_Lights.LightsResponse> responseObserver) {

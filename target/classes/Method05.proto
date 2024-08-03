@@ -4,7 +4,7 @@ option java_package = "S05Drink_Catalog"; // Package name for generated Java fil
 option java_outer_classname = "S05DrinkCatalog"; // Outer class name for generated Java files
 package artifact_cinema;
 
-// Request message containing a list of drink IDs //server Streaming.
+// Request message containing a list of drink IDs server Streaming. This rpc is to show a list of drinks and 
 message DrinkRequest {
   repeated int32 drink_ids = 1; // List of drink IDs chosen by the client
 }

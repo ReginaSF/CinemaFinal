@@ -8,11 +8,11 @@ package S03Cinema_Lights;
  * The request message containing the cinema room number and instruction "activate lights or lights off "
  * </pre>
  *
- * Protobuf type {@code LightsRequest}
+ * Protobuf type {@code cinema2.LightsRequest}
  */
 public  final class LightsRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:LightsRequest)
+    // @@protoc_insertion_point(message_implements:cinema2.LightsRequest)
     LightsRequestOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use LightsRequest.newBuilder() to construct.
@@ -81,13 +81,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return S03Cinema_Lights.S03CinemaLights.internal_static_LightsRequest_descriptor;
+    return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return S03Cinema_Lights.S03CinemaLights.internal_static_LightsRequest_fieldAccessorTable
+    return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             S03Cinema_Lights.LightsRequest.class, S03Cinema_Lights.LightsRequest.Builder.class);
   }
@@ -346,21 +346,21 @@ private static final long serialVersionUID = 0L;
    * The request message containing the cinema room number and instruction "activate lights or lights off "
    * </pre>
    *
-   * Protobuf type {@code LightsRequest}
+   * Protobuf type {@code cinema2.LightsRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:LightsRequest)
+      // @@protoc_insertion_point(builder_implements:cinema2.LightsRequest)
       S03Cinema_Lights.LightsRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsRequest_descriptor;
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsRequest_fieldAccessorTable
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               S03Cinema_Lights.LightsRequest.class, S03Cinema_Lights.LightsRequest.Builder.class);
     }
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsRequest_descriptor;
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsRequest_descriptor;
     }
 
     @java.lang.Override
@@ -690,10 +690,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:LightsRequest)
+    // @@protoc_insertion_point(builder_scope:cinema2.LightsRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:LightsRequest)
+  // @@protoc_insertion_point(class_scope:cinema2.LightsRequest)
   private static final S03Cinema_Lights.LightsRequest DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new S03Cinema_Lights.LightsRequest();

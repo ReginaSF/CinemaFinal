@@ -8,11 +8,11 @@ package S03Cinema_Lights;
  * The response message containing the status of the operation
  * </pre>
  *
- * Protobuf type {@code LightsResponse}
+ * Protobuf type {@code cinema2.LightsResponse}
  */
 public  final class LightsResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:LightsResponse)
+    // @@protoc_insertion_point(message_implements:cinema2.LightsResponse)
     LightsResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use LightsResponse.newBuilder() to construct.
@@ -74,13 +74,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return S03Cinema_Lights.S03CinemaLights.internal_static_LightsResponse_descriptor;
+    return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return S03Cinema_Lights.S03CinemaLights.internal_static_LightsResponse_fieldAccessorTable
+    return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             S03Cinema_Lights.LightsResponse.class, S03Cinema_Lights.LightsResponse.Builder.class);
   }
@@ -287,21 +287,21 @@ private static final long serialVersionUID = 0L;
    * The response message containing the status of the operation
    * </pre>
    *
-   * Protobuf type {@code LightsResponse}
+   * Protobuf type {@code cinema2.LightsResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:LightsResponse)
+      // @@protoc_insertion_point(builder_implements:cinema2.LightsResponse)
       S03Cinema_Lights.LightsResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsResponse_descriptor;
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsResponse_fieldAccessorTable
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               S03Cinema_Lights.LightsResponse.class, S03Cinema_Lights.LightsResponse.Builder.class);
     }
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return S03Cinema_Lights.S03CinemaLights.internal_static_LightsResponse_descriptor;
+      return S03Cinema_Lights.S03CinemaLights.internal_static_cinema2_LightsResponse_descriptor;
     }
 
     @java.lang.Override
@@ -535,10 +535,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:LightsResponse)
+    // @@protoc_insertion_point(builder_scope:cinema2.LightsResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:LightsResponse)
+  // @@protoc_insertion_point(class_scope:cinema2.LightsResponse)
   private static final S03Cinema_Lights.LightsResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new S03Cinema_Lights.LightsResponse();
