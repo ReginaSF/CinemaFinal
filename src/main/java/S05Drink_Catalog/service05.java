@@ -19,9 +19,9 @@ public class service05 {
         server.start();
         System.out.println("Server started, listening on " + port);
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.err.println("*** shutting down gRPC server since JVM is shutting down");
+            System.err.println("shutting down server");
             service05.this.stop();
-            System.err.println("*** server shut down");
+            System.err.println("server stopped");
         }));
     }
 
@@ -50,13 +50,11 @@ public class service05 {
         public void offerDrinks(DrinkRequest request, StreamObserver<DrinkResponse> responseObserver) {
             // Process each drink ID in the request
             for (Integer drinkId : request.getDrinkIdsList()) {
-                // Here you would typically check drink availability and generate a response
-                // For simplicity, we assume all drinks are available
-                
-                // Build a confirmation message
+                                
+                // Confirming to the user:
                 String confirmationMessage = "Drink ID " + drinkId + " is available.";
                 
-                // Send the response
+                // Sending the response
                 DrinkResponse response = DrinkResponse.newBuilder()
                         .setDrinkId(drinkId)
                         .setConfirmationMessage(confirmationMessage)
@@ -65,7 +63,6 @@ public class service05 {
                 responseObserver.onNext(response);
             }
             
-            // Mark the end of the stream
             responseObserver.onCompleted();
         }
     }

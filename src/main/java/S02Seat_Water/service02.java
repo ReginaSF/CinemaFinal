@@ -4,26 +4,18 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-// Implementación del servicio gRPC
+// starting server 2 here:
 public class service02 {
-
-    private final int port = 50051;
-    private final Server server;
-
-    public service02() {
-        // Crea una instancia del servicio implementado
-        server = ServerBuilder.forPort(port)
+              	Server server = ServerBuilder.forPort(50051)
                 .addService(new S02SeatWaterServiceImpl())
                 .build();
-    }
-
-    public void start() throws Exception {
+        public void start() throws Exception {
         server.start();
-        System.out.println("Server started, listening on " + port);
+        System.out.println("Server_Heating is working on Port: " + server.getPort());
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.err.println("*** shutting down gRPC server since JVM is shutting down");
+            System.err.println("shutting down server02");
             service02.this.stop();
-            System.err.println("*** server shut down");
+            System.err.println("server shut down");
         }));
     }
 
@@ -46,14 +38,12 @@ public class service02 {
     }
 }
 
-// Implementación del servicio gRPC generado
 class S02SeatWaterServiceImpl extends S02SeatWaterGrpc.S02SeatWaterImplBase {
-
+//Here activateWaterImmersive is the method on the proto which is triggering the water activation or deactivation, Asyncro behaviour
     @Override
     public void activateWaterImmersiveFeature(ActivateRequest request, StreamObserver<ActivateResponse> responseObserver) {
         String choice = request.getChoice();
         String message;
-
         if ("yes".equalsIgnoreCase(choice)) {
             message = "Water immersive feature activated.";
         } else if ("no".equalsIgnoreCase(choice)) {

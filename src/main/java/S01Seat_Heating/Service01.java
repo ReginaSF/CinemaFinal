@@ -39,4 +39,9 @@ public class Service01 {
             responseObserver.onCompleted();    // Finishes the rpc
         }
     }
+
+	public static void startS() {
+		// TODO Auto-generated method stub
+		
+	}
 }

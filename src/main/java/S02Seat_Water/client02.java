@@ -12,21 +12,21 @@ public class client02 {
     private final S02SeatWaterGrpc.S02SeatWaterBlockingStub blockingStub;
 
     public client02(String host, int port) {
-        // Crear un canal para conectar con el servidor gRPC
+      
         channel = ManagedChannelBuilder.forAddress(host, port)
-                .usePlaintext() // Deshabilita la encriptación para simplificar el ejemplo
+                .usePlaintext() 
                 .build();
-        // Crear un cliente de bloqueo basado en el canal
+  
         blockingStub = S02SeatWaterGrpc.newBlockingStub(channel);
     }
 
     public void activateWaterImmersiveFeature(String choice) {
-        // Crear la solicitud
+      
         ActivateRequest request = ActivateRequest.newBuilder()
                 .setChoice(choice)
                 .build();
 
-        // Enviar la solicitud al servidor y recibir la respuesta
+    
         ActivateResponse response;
         try {
             response = blockingStub.activateWaterImmersiveFeature(request);
@@ -35,29 +35,28 @@ public class client02 {
             return;
         }
 
-        // Imprimir la respuesta recibida del servidor
         System.out.println("Response: " + response.getMessage());
     }
 
     public static void main(String[] args) {
-        // Crear una instancia del cliente
+        // instantiating the client
         client02 client = new client02("localhost", 50051);
 
-        // Crear un scanner para leer la entrada del usuario
+        // scanner to receive the req
         Scanner scanner = new Scanner(System.in);
 
-        // Leer la entrada del usuario
+        // checking the input
         System.out.println("Enter choice ('yes' or 'no'): ");
         String choice = scanner.nextLine();
 
-        // Llamar al método del servicio gRPC
+        // calling the method
         if ("yes".equalsIgnoreCase(choice) || "no".equalsIgnoreCase(choice)) {
             client.activateWaterImmersiveFeature(choice);
         } else {
             System.out.println("Invalid choice. Please enter 'yes' or 'no'.");
         }
 
-        // Cerrar el scanner
+       
         scanner.close();
     }
 }
