@@ -4,7 +4,7 @@
 package S05Drink_Catalog;
 
 public interface DrinkResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:artifact_cinema.DrinkResponse)
+    // @@protoc_insertion_point(interface_extends:cinema2.DrinkResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

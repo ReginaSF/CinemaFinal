@@ -59,7 +59,7 @@ public class client06 {
 
             // Wait for the response
             // Use more robust synchronization in a real-world scenario
-            Thread.sleep(5000); // Adjust the wait time as needed
+            Thread.sleep(5000); 
 
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
@@ -77,7 +77,7 @@ public class client06 {
 
         // Sample payment details
         String cardNumber = "5445 6556 7856 8934";
-        String cardholder = "Frida Sofia Swift";
+        String cardholder = "Regina Salazar ";
         String securityNumber = "531";
         String issueDate = "09/26";
 

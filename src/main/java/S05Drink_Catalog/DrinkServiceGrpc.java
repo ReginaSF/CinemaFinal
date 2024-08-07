@@ -27,7 +27,7 @@ public final class DrinkServiceGrpc {
 
   private DrinkServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "artifact_cinema.DrinkService";
+  public static final String SERVICE_NAME = "cinema2.DrinkService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<S05Drink_Catalog.DrinkRequest,
@@ -48,7 +48,7 @@ public final class DrinkServiceGrpc {
               io.grpc.MethodDescriptor.<S05Drink_Catalog.DrinkRequest, S05Drink_Catalog.DrinkResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(
-                  "artifact_cinema.DrinkService", "OfferDrinks"))
+                  "cinema2.DrinkService", "OfferDrinks"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   S05Drink_Catalog.DrinkRequest.getDefaultInstance()))

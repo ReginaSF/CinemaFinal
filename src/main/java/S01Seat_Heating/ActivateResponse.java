@@ -8,11 +8,11 @@ package S01Seat_Heating;
  * Response message for ActivateHeating RPC.
  * </pre>
  *
- * Protobuf type {@code Artifact_cinema.ActivateResponse}
+ * Protobuf type {@code cinema2.ActivateResponse}
  */
 public  final class ActivateResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:Artifact_cinema.ActivateResponse)
+    // @@protoc_insertion_point(message_implements:cinema2.ActivateResponse)
     ActivateResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use ActivateResponse.newBuilder() to construct.
@@ -74,13 +74,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return S01Seat_Heating.Serv01Seat_Heating.internal_static_Artifact_cinema_ActivateResponse_descriptor;
+    return S01Seat_Heating.Serv01Seat_Heating.internal_static_cinema2_ActivateResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return S01Seat_Heating.Serv01Seat_Heating.internal_static_Artifact_cinema_ActivateResponse_fieldAccessorTable
+    return S01Seat_Heating.Serv01Seat_Heating.internal_static_cinema2_ActivateResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             S01Seat_Heating.ActivateResponse.class, S01Seat_Heating.ActivateResponse.Builder.class);
   }
@@ -287,21 +287,21 @@ private static final long serialVersionUID = 0L;
    * Response message for ActivateHeating RPC.
    * </pre>
    *
-   * Protobuf type {@code Artifact_cinema.ActivateResponse}
+   * Protobuf type {@code cinema2.ActivateResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:Artifact_cinema.ActivateResponse)
+      // @@protoc_insertion_point(builder_implements:cinema2.ActivateResponse)
       S01Seat_Heating.ActivateResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return S01Seat_Heating.Serv01Seat_Heating.internal_static_Artifact_cinema_ActivateResponse_descriptor;
+      return S01Seat_Heating.Serv01Seat_Heating.internal_static_cinema2_ActivateResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return S01Seat_Heating.Serv01Seat_Heating.internal_static_Artifact_cinema_ActivateResponse_fieldAccessorTable
+      return S01Seat_Heating.Serv01Seat_Heating.internal_static_cinema2_ActivateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               S01Seat_Heating.ActivateResponse.class, S01Seat_Heating.ActivateResponse.Builder.class);
     }
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return S01Seat_Heating.Serv01Seat_Heating.internal_static_Artifact_cinema_ActivateResponse_descriptor;
+      return S01Seat_Heating.Serv01Seat_Heating.internal_static_cinema2_ActivateResponse_descriptor;
     }
 
     @java.lang.Override
@@ -535,10 +535,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:Artifact_cinema.ActivateResponse)
+    // @@protoc_insertion_point(builder_scope:cinema2.ActivateResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:Artifact_cinema.ActivateResponse)
+  // @@protoc_insertion_point(class_scope:cinema2.ActivateResponse)
   private static final S01Seat_Heating.ActivateResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new S01Seat_Heating.ActivateResponse();

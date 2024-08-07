@@ -1,5 +1,9 @@
+//Client Streaming
 package S03Cinema_Lights;
 
+import java.util.logging.Logger;
+
+import S02Seat_Water.service02;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
@@ -36,8 +40,8 @@ class CinemaLightsServiceImpl extends CinemaLightsServiceGrpc.CinemaLightsServic
 
 // Server Initialization and Startup
 public class service03 {
-
-    private final int port = 50051;
+	private static final Logger logger = Logger.getLogger(service03.class.getName());
+    private final int port = 50052;
     private final Server server;
 
     public service03() {
@@ -48,12 +52,8 @@ public class service03 {
 
     public void start() throws Exception {
         server.start();
+        logger.info("Server03Cinema_Lights is working on Port: " + server.getPort());
         System.out.println("Server started, listening on " + port);
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.err.println("*** shutting down gRPC server since JVM is shutting down");
-            service03.this.stop();
-            System.err.println("*** server shut down");
-        }));
     }
 
     public void stop() {
@@ -73,4 +73,9 @@ public class service03 {
             server.awaitTermination();
         }
     }
+
+	public static void startS() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,12 +1,16 @@
+//Serv. Streaming
 package S05Drink_Catalog;
 
+import java.util.logging.Logger;
+
+import S02Seat_Water.service02;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
 public class service05 {
-
-    private final int port = 50051;
+	private static final Logger logger = Logger.getLogger(service05.class.getName());
+    private final int port = 50054;
     private final Server server;
 
     public service05() {
@@ -17,6 +21,7 @@ public class service05 {
 
     public void start() throws Exception {
         server.start();
+        logger.info("Server_05Drink_Catalog is working on Port: " + server.getPort());
         System.out.println("Server started, listening on " + port);
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             System.err.println("shutting down server");
@@ -66,4 +71,9 @@ public class service05 {
             responseObserver.onCompleted();
         }
     }
+
+	public static void startS() {
+		// TODO Auto-generated method stub
+		
+	}
 }

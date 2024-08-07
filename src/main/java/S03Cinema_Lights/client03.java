@@ -13,56 +13,47 @@ public class client03 {
 
     public client03(String host, int port) {
         channel = ManagedChannelBuilder.forAddress(host, port)
-                .usePlaintext() // Deshabilita la encriptación para simplificar el ejemplo
+                .usePlaintext() 
                 .build();
         asyncStub = CinemaLightsServiceGrpc.newStub(channel);
     }
 
-    public void controlLights() {
-        // Crear un StreamObserver para enviar datos al servidor
+    public void controlLights() {     
         StreamObserver<LightsRequest> requestObserver = asyncStub.controlLights(new StreamObserver<LightsResponse>() {
             @Override
             public void onNext(LightsResponse response) {
-                // Imprimir la respuesta del servidor
-                System.out.println("Response received: " + response.getStatus());
+                       System.out.println("Response received: " + response.getStatus());
             }
-
             @Override
             public void onError(Throwable t) {
-                // Manejar errores
-                System.err.println("Error: " + t);
+                     System.err.println("Error: " + t);
             }
-
             @Override
             public void onCompleted() {
-                // Informar que el servidor ha completado el procesamiento
-                System.out.println("Server has completed processing.");
+            		System.out.println("Server has completed processing.");
             }
         });
 
-        // Crear un Scanner para leer la entrada del usuario
+        // here i am inserting an Scanner to receive the user input
         Scanner scanner = new Scanner(System.in);
 
         try {
             while (true) {
-                // Leer la entrada del usuario
                 System.out.print("Enter room number (or 'exit' to finish): ");
                 String roomNumber = scanner.nextLine();
 
                 if ("exit".equalsIgnoreCase(roomNumber)) {
                     break;
                 }
-
                 System.out.print("Enter command ('activate' or 'deactivate'): ");
                 String command = scanner.nextLine();
 
-                // Validar el comando
                 if (!"activate".equalsIgnoreCase(command) && !"deactivate".equalsIgnoreCase(command)) {
                     System.out.println("Invalid command. Please enter 'activate' or 'deactivate'.");
                     continue;
                 }
 
-                // Enviar la solicitud al servidor
+                // Sending the request to the server 
                 LightsRequest request = LightsRequest.newBuilder()
                         .setRoomNumber(roomNumber)
                         .setCommand(command)
@@ -70,18 +61,17 @@ public class client03 {
                 requestObserver.onNext(request);
             }
 
-            // Marcar el final de las solicitudes
+            // Checks no more requests
             requestObserver.onCompleted();
         } catch (RuntimeException e) {
             requestObserver.onError(e);
         } finally {
-            // Cerrar el scanner
-            scanner.close();
+                      scanner.close();
         }
     }
 
     public static void main(String[] args) {
-        client03 client = new client03("localhost", 50051);
-        client.controlLights();
+        client03 client = new client03("localhost", 50052);
+        client.controlLights(); 
     }
 }

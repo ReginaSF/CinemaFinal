@@ -1,30 +1,30 @@
-
+//Client Str
 package S04Cinema_Admission;
 
+import java.util.logging.Logger;
+
+import S02Seat_Water.service02;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
-// Implementación del servicio gRPC
+// Declaring the service, 
 public class service04 {
-
-    private final int port = 50051; // Número de puerto
+	private static final Logger logger = Logger.getLogger(service04.class.getName());
+    private final int port = 50053; 
     private final Server server;
 
     public service04() {
         server = ServerBuilder.forPort(port)
-                .addService(new TicketServiceImpl()) // Añadir la implementación del servicio
+                .addService(new TicketServiceImpl())
                 .build();
     }
 
     public void start() throws Exception {
         server.start();
+        logger.info("Server04Cinema_Admission is working on Port: " + server.getPort());
         System.out.println("Server started, listening on " + port);
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.err.println("*** shutting down gRPC server since JVM is shutting down");
-            service04.this.stop();
-            System.err.println("*** server shut down");
-        }));
+      
     }
 
     public void stop() {
@@ -44,6 +44,11 @@ public class service04 {
             server.awaitTermination();
         }
     }
+
+	public static void startS() {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
 // Implementación del servicio gRPC
@@ -52,33 +57,28 @@ class TicketServiceImpl extends TicketServiceGrpc.TicketServiceImplBase {
     @Override
     public StreamObserver<TicketRequest> enterTicketNumber(StreamObserver<TicketResponse> responseObserver) {
         return new StreamObserver<TicketRequest>() {
-            private boolean accepted = true; // Suponemos que el ticket es aceptado por defecto
+            private boolean accepted = true;
             private StringBuilder messageBuilder = new StringBuilder();
 
             @Override
             public void onNext(TicketRequest request) {
-                // Procesar cada solicitud (e.g., validar el número del ticket y el nombre)
-                messageBuilder.append("Recibido ticket número ")
+                  messageBuilder.append("Received thicket: ")
                         .append(request.getTicketNumber())
-                        .append(" para ")
+                        .append(" For ")
                         .append(request.getName())
                         .append("\n");
 
-                // En una aplicación real, se validaría el ticket aquí y se ajustaría 'accepted' según corresponda
-                // Por simplicidad, asumimos que todos los tickets son aceptados
             }
 
             @Override
             public void onError(Throwable t) {
-                // Manejar errores
+       
                 System.err.println("Error al procesar solicitudes de tickets: " + t.getMessage());
                 // Opcionalmente, ajustar 'accepted' en base al manejo de errores
             }
-
             @Override
             public void onCompleted() {
-                // Enviar la respuesta final después de procesar todas las solicitudes
-                TicketResponse response = TicketResponse.newBuilder()
+                         TicketResponse response = TicketResponse.newBuilder()
                         .setAccepted(accepted)
                         .setMessage(messageBuilder.toString())
                         .build();

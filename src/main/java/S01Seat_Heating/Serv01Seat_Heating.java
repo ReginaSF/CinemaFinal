@@ -15,15 +15,15 @@ public final class Serv01Seat_Heating {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Artifact_cinema_ActivateRequest_descriptor;
+    internal_static_cinema2_ActivateRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Artifact_cinema_ActivateRequest_fieldAccessorTable;
+      internal_static_cinema2_ActivateRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Artifact_cinema_ActivateResponse_descriptor;
+    internal_static_cinema2_ActivateResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Artifact_cinema_ActivateResponse_fieldAccessorTable;
+      internal_static_cinema2_ActivateResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,13 +33,12 @@ public final class Serv01Seat_Heating {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016Method01.proto\022\017Artifact_cinema\"\037\n\017Act" +
-      "ivateRequest\022\014\n\004name\030\001 \001(\t\"#\n\020ActivateRe" +
-      "sponse\022\017\n\007message\030\001 \001(\t2k\n\017CinemaImmersi" +
-      "ve\022X\n\017ActivateHeating\022 .Artifact_cinema." +
-      "ActivateRequest\032!.Artifact_cinema.Activa" +
-      "teResponse\"\000B\'\n\017S01Seat_HeatingB\022Serv01S" +
-      "eat_HeatingP\001b\006proto3"
+      "\n\016Method01.proto\022\007cinema2\"\037\n\017ActivateReq" +
+      "uest\022\014\n\004name\030\001 \001(\t\"#\n\020ActivateResponse\022\017" +
+      "\n\007message\030\001 \001(\t2[\n\017CinemaImmersive\022H\n\017Ac" +
+      "tivateHeating\022\030.cinema2.ActivateRequest\032" +
+      "\031.cinema2.ActivateResponse\"\000B\'\n\017S01Seat_" +
+      "HeatingB\022Serv01Seat_HeatingP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -53,17 +52,17 @@ public final class Serv01Seat_Heating {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_Artifact_cinema_ActivateRequest_descriptor =
+    internal_static_cinema2_ActivateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_Artifact_cinema_ActivateRequest_fieldAccessorTable = new
+    internal_static_cinema2_ActivateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Artifact_cinema_ActivateRequest_descriptor,
+        internal_static_cinema2_ActivateRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_Artifact_cinema_ActivateResponse_descriptor =
+    internal_static_cinema2_ActivateResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_Artifact_cinema_ActivateResponse_fieldAccessorTable = new
+    internal_static_cinema2_ActivateResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Artifact_cinema_ActivateResponse_descriptor,
+        internal_static_cinema2_ActivateResponse_descriptor,
         new java.lang.String[] { "Message", });
   }
 

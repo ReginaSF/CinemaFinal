@@ -8,11 +8,11 @@ package S05Drink_Catalog;
  * Response message with the availability confirmation for each drink
  * </pre>
  *
- * Protobuf type {@code artifact_cinema.DrinkResponse}
+ * Protobuf type {@code cinema2.DrinkResponse}
  */
 public  final class DrinkResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:artifact_cinema.DrinkResponse)
+    // @@protoc_insertion_point(message_implements:cinema2.DrinkResponse)
     DrinkResponseOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use DrinkResponse.newBuilder() to construct.
@@ -80,13 +80,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return S05Drink_Catalog.S05DrinkCatalog.internal_static_artifact_cinema_DrinkResponse_descriptor;
+    return S05Drink_Catalog.S05DrinkCatalog.internal_static_cinema2_DrinkResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return S05Drink_Catalog.S05DrinkCatalog.internal_static_artifact_cinema_DrinkResponse_fieldAccessorTable
+    return S05Drink_Catalog.S05DrinkCatalog.internal_static_cinema2_DrinkResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             S05Drink_Catalog.DrinkResponse.class, S05Drink_Catalog.DrinkResponse.Builder.class);
   }
@@ -317,21 +317,21 @@ private static final long serialVersionUID = 0L;
    * Response message with the availability confirmation for each drink
    * </pre>
    *
-   * Protobuf type {@code artifact_cinema.DrinkResponse}
+   * Protobuf type {@code cinema2.DrinkResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:artifact_cinema.DrinkResponse)
+      // @@protoc_insertion_point(builder_implements:cinema2.DrinkResponse)
       S05Drink_Catalog.DrinkResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return S05Drink_Catalog.S05DrinkCatalog.internal_static_artifact_cinema_DrinkResponse_descriptor;
+      return S05Drink_Catalog.S05DrinkCatalog.internal_static_cinema2_DrinkResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return S05Drink_Catalog.S05DrinkCatalog.internal_static_artifact_cinema_DrinkResponse_fieldAccessorTable
+      return S05Drink_Catalog.S05DrinkCatalog.internal_static_cinema2_DrinkResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               S05Drink_Catalog.DrinkResponse.class, S05Drink_Catalog.DrinkResponse.Builder.class);
     }
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return S05Drink_Catalog.S05DrinkCatalog.internal_static_artifact_cinema_DrinkResponse_descriptor;
+      return S05Drink_Catalog.S05DrinkCatalog.internal_static_cinema2_DrinkResponse_descriptor;
     }
 
     @java.lang.Override
@@ -609,10 +609,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:artifact_cinema.DrinkResponse)
+    // @@protoc_insertion_point(builder_scope:cinema2.DrinkResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:artifact_cinema.DrinkResponse)
+  // @@protoc_insertion_point(class_scope:cinema2.DrinkResponse)
   private static final S05Drink_Catalog.DrinkResponse DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new S05Drink_Catalog.DrinkResponse();

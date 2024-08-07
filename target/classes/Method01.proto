@@ -4,10 +4,9 @@ option java_multiple_files = true;
 option java_package = "S01Seat_Heating";
 option java_outer_classname = "Serv01Seat_Heating";
 
-package Artifact_cinema;
+package cinema2;
 
-// Interface exported by the server.
-// This service is called SeatTemperature in the proposal document.
+// This service is called SeatTemperature in the proposal document. Is Unary.
 service CinemaImmersive {
   // Activates the heating of a seat.
   rpc ActivateHeating (ActivateRequest) returns (ActivateResponse) {}

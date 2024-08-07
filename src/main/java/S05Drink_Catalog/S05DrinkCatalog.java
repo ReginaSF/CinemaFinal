@@ -15,15 +15,15 @@ public final class S05DrinkCatalog {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_artifact_cinema_DrinkRequest_descriptor;
+    internal_static_cinema2_DrinkRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_artifact_cinema_DrinkRequest_fieldAccessorTable;
+      internal_static_cinema2_DrinkRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_artifact_cinema_DrinkResponse_descriptor;
+    internal_static_cinema2_DrinkResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_artifact_cinema_DrinkResponse_fieldAccessorTable;
+      internal_static_cinema2_DrinkResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,13 +33,13 @@ public final class S05DrinkCatalog {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016Method05.proto\022\017artifact_cinema\"!\n\014Dri" +
-      "nkRequest\022\021\n\tdrink_ids\030\001 \003(\005\"?\n\rDrinkRes" +
-      "ponse\022\020\n\010drink_id\030\001 \001(\005\022\034\n\024confirmation_" +
-      "message\030\002 \001(\t2^\n\014DrinkService\022N\n\013OfferDr" +
-      "inks\022\035.artifact_cinema.DrinkRequest\032\036.ar" +
-      "tifact_cinema.DrinkResponse0\001B%\n\020S05Drin" +
-      "k_CatalogB\017S05DrinkCatalogP\001b\006proto3"
+      "\n\016Method05.proto\022\007cinema2\"!\n\014DrinkReques" +
+      "t\022\021\n\tdrink_ids\030\001 \003(\005\"?\n\rDrinkResponse\022\020\n" +
+      "\010drink_id\030\001 \001(\005\022\034\n\024confirmation_message\030" +
+      "\002 \001(\t2N\n\014DrinkService\022>\n\013OfferDrinks\022\025.c" +
+      "inema2.DrinkRequest\032\026.cinema2.DrinkRespo" +
+      "nse0\001B%\n\020S05Drink_CatalogB\017S05DrinkCatal" +
+      "ogP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -53,17 +53,17 @@ public final class S05DrinkCatalog {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_artifact_cinema_DrinkRequest_descriptor =
+    internal_static_cinema2_DrinkRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_artifact_cinema_DrinkRequest_fieldAccessorTable = new
+    internal_static_cinema2_DrinkRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_artifact_cinema_DrinkRequest_descriptor,
+        internal_static_cinema2_DrinkRequest_descriptor,
         new java.lang.String[] { "DrinkIds", });
-    internal_static_artifact_cinema_DrinkResponse_descriptor =
+    internal_static_cinema2_DrinkResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_artifact_cinema_DrinkResponse_fieldAccessorTable = new
+    internal_static_cinema2_DrinkResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_artifact_cinema_DrinkResponse_descriptor,
+        internal_static_cinema2_DrinkResponse_descriptor,
         new java.lang.String[] { "DrinkId", "ConfirmationMessage", });
   }
 

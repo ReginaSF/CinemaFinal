@@ -1,3 +1,4 @@
+//Serv. Streaming
 package S05Drink_Catalog;
 
 import java.util.Iterator;
@@ -10,7 +11,7 @@ public class client05 {
 
     public static void main(String[] args) throws InterruptedException {
         // Create a channel to the server
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50054)
                 .usePlaintext()  // Use plaintext for communication
                 .build();
 

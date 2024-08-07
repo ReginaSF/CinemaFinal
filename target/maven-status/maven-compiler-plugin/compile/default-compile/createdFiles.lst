@@ -71,10 +71,12 @@ S05Drink_Catalog\DrinkServiceGrpc$DrinkServiceStub.class
 S06Food_Payment\PaymentServiceGrpc$PaymentServiceImplBase.class
 S02Seat_Water\S02SeatWaterGrpc$S02SeatWaterBlockingStub.class
 S01Seat_Heating\ActivateResponse$1.class
+cinemaDNS\CinemaServiceRegistration.class
 S05Drink_Catalog\DrinkResponse$1.class
 S02Seat_Water\S02SeatWaterServiceImpl.class
 S03Cinema_Lights\client03$1.class
 S03Cinema_Lights\CinemaLightsServiceGrpc$CinemaLightsServiceImplBase.class
+cinemaDNS\CinemaServiceDiscovery$1.class
 S02Seat_Water\Serv02Seat_Water.class
 S01Seat_Heating\ActivateRequestOrBuilder.class
 S03Cinema_Lights\LightsRequestOrBuilder.class
@@ -136,7 +138,9 @@ S03Cinema_Lights\CinemaLightsServiceGrpc$CinemaLightsServiceBaseDescriptorSuppli
 S01Seat_Heating\CinemaImmersiveGrpc$CinemaImmersiveBaseDescriptorSupplier.class
 S02Seat_Water\S02SeatWaterGrpc$MethodHandlers.class
 S04Cinema_Admission\TicketRequest$Builder.class
+cinemaDNS\CinemaServiceDiscovery$SampleListener.class
 S01Seat_Heating\CinemaImmersiveGrpc$CinemaImmersiveMethodDescriptorSupplier.class
+cinemaDNS\CinemaServiceDiscovery.class
 S04Cinema_Admission\client04$1.class
 S02Seat_Water\ActivateResponse$1.class
 S06Food_Payment\PaymentServiceGrpc$MethodHandlers.class

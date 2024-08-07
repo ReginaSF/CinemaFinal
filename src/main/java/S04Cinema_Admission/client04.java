@@ -11,7 +11,7 @@ public class client04 {
 
     public static void main(String[] args) {
         // Crear un canal para conectarse al servidor
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50053)
                 .usePlaintext()  // Usar texto sin cifrar (inseguro para producción)
                 .build();
 

@@ -17,8 +17,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * Interface exported by the server.
- * This service is called SeatTemperature in the proposal document.
+ * This service is called SeatTemperature in the proposal document. Is Unary.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -28,7 +27,7 @@ public final class CinemaImmersiveGrpc {
 
   private CinemaImmersiveGrpc() {}
 
-  public static final String SERVICE_NAME = "Artifact_cinema.CinemaImmersive";
+  public static final String SERVICE_NAME = "cinema2.CinemaImmersive";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<S01Seat_Heating.ActivateRequest,
@@ -49,7 +48,7 @@ public final class CinemaImmersiveGrpc {
               io.grpc.MethodDescriptor.<S01Seat_Heating.ActivateRequest, S01Seat_Heating.ActivateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "Artifact_cinema.CinemaImmersive", "ActivateHeating"))
+                  "cinema2.CinemaImmersive", "ActivateHeating"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   S01Seat_Heating.ActivateRequest.getDefaultInstance()))
@@ -88,8 +87,7 @@ public final class CinemaImmersiveGrpc {
 
   /**
    * <pre>
-   * Interface exported by the server.
-   * This service is called SeatTemperature in the proposal document.
+   * This service is called SeatTemperature in the proposal document. Is Unary.
    * </pre>
    */
   public static abstract class CinemaImmersiveImplBase implements io.grpc.BindableService {
@@ -119,8 +117,7 @@ public final class CinemaImmersiveGrpc {
 
   /**
    * <pre>
-   * Interface exported by the server.
-   * This service is called SeatTemperature in the proposal document.
+   * This service is called SeatTemperature in the proposal document. Is Unary.
    * </pre>
    */
   public static final class CinemaImmersiveStub extends io.grpc.stub.AbstractStub<CinemaImmersiveStub> {
@@ -153,8 +150,7 @@ public final class CinemaImmersiveGrpc {
 
   /**
    * <pre>
-   * Interface exported by the server.
-   * This service is called SeatTemperature in the proposal document.
+   * This service is called SeatTemperature in the proposal document. Is Unary.
    * </pre>
    */
   public static final class CinemaImmersiveBlockingStub extends io.grpc.stub.AbstractStub<CinemaImmersiveBlockingStub> {
@@ -186,8 +182,7 @@ public final class CinemaImmersiveGrpc {
 
   /**
    * <pre>
-   * Interface exported by the server.
-   * This service is called SeatTemperature in the proposal document.
+   * This service is called SeatTemperature in the proposal document. Is Unary.
    * </pre>
    */
   public static final class CinemaImmersiveFutureStub extends io.grpc.stub.AbstractStub<CinemaImmersiveFutureStub> {

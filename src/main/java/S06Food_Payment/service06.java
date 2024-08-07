@@ -1,11 +1,16 @@
+//Bidirectional Straming
 package S06Food_Payment;
-
+import java.util.logging.Logger;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 import java.io.IOException;
+import java.util.logging.Logger;
+
+import S05Drink_Catalog.service05;
 
 public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
+	
 
     @Override
     public StreamObserver<PaymentRequest> processPayment(StreamObserver<PaymentResponse> responseObserver) {
@@ -45,13 +50,14 @@ public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
+    	final Logger logger = Logger.getLogger(service06.class.getName());
         // Create and start the gRPC server
         Server server = ServerBuilder.forPort(9090)
                 .addService(new service06())
                 .build()
                 .start();
-
-        System.out.println("Server started on port 9090");
+        logger.info("Server_06Food_Payment is working on Port: " + server.getPort());
+        System.out.println("Server started, listening on 9090");
 
         // Keep the server running
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -62,4 +68,9 @@ public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
 
         server.awaitTermination();
     }
+
+	public static void startS() {
+		// TODO Auto-generated method stub
+		
+	}
 }

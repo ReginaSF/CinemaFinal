@@ -1,3 +1,4 @@
+//Unary
 package S01Seat_Heating;
 
 import java.util.logging.Logger;
@@ -8,8 +9,9 @@ import io.grpc.stub.StreamObserver;
 public class Service01 {
     private static final Logger logger = Logger.getLogger(Service01.class.getName());
 
+    
     public static void main(String[] args) throws Exception {
-        // Starting the server 01 here:
+ 
         Server server = ServerBuilder.forPort(9091)
             .addService(new CinemaImmersiveServiceImpl())
             .build()
@@ -40,8 +42,5 @@ public class Service01 {
         }
     }
 
-	public static void startS() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

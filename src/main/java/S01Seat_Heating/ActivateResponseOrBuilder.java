@@ -4,7 +4,7 @@
 package S01Seat_Heating;
 
 public interface ActivateResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:Artifact_cinema.ActivateResponse)
+    // @@protoc_insertion_point(interface_extends:cinema2.ActivateResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**
