@@ -45,13 +45,9 @@ public class service04 {
         }
     }
 
-	public static void startS() {
-		// TODO Auto-generated method stub
-		
-	}
 }
 
-// Implementación del servicio gRPC
+
 class TicketServiceImpl extends TicketServiceGrpc.TicketServiceImplBase {
 
     @Override
@@ -62,7 +58,7 @@ class TicketServiceImpl extends TicketServiceGrpc.TicketServiceImplBase {
 
             @Override
             public void onNext(TicketRequest request) {
-                  messageBuilder.append("Received thicket: ")
+                  messageBuilder.append("Received ticket: ")
                         .append(request.getTicketNumber())
                         .append(" For ")
                         .append(request.getName())
@@ -73,8 +69,8 @@ class TicketServiceImpl extends TicketServiceGrpc.TicketServiceImplBase {
             @Override
             public void onError(Throwable t) {
        
-                System.err.println("Error al procesar solicitudes de tickets: " + t.getMessage());
-                // Opcionalmente, ajustar 'accepted' en base al manejo de errores
+                System.err.println("Error : " + t.getMessage());
+             
             }
             @Override
             public void onCompleted() {

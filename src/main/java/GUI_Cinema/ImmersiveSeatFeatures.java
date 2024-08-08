@@ -69,7 +69,7 @@ public class ImmersiveSeatFeatures implements ActionListener {
             responseMessage = "RPC failed: " + ex.getStatus();
         }
 
-        // Update the UI with the response message
+        // Showing the response message for the heating req:
         replyHeating.setText(responseMessage);
     }
 

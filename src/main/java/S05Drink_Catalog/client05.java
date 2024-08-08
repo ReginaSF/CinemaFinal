@@ -10,15 +10,14 @@ import io.grpc.stub.StreamObserver;
 public class client05 {
 
     public static void main(String[] args) throws InterruptedException {
-        // Create a channel to the server
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50054)
-                .usePlaintext()  // Use plaintext for communication
+                .usePlaintext() 
                 .build();
 
-        // Create a stub for the service
+        // Stub declaration:
         DrinkServiceGrpc.DrinkServiceBlockingStub blockingStub = DrinkServiceGrpc.newBlockingStub(channel);
 
-        // Create the request with a list of drink IDs
+        // Request with a list of drink IDs
         DrinkRequest request = DrinkRequest.newBuilder()
                 .addDrinkIds(1)
                 .addDrinkIds(2)

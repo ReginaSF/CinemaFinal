@@ -4,6 +4,10 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
 
+import java.time.LocalTime;
+import java.util.Scanner;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 public class client06 {
 
@@ -11,15 +15,31 @@ public class client06 {
     private final PaymentServiceGrpc.PaymentServiceStub asyncStub;
 
     public client06() {
-        // Create a channel to the gRPC server
-        channel = ManagedChannelBuilder.forAddress("localhost", 9090)
-                .usePlaintext() // Use plaintext communication (non-encrypted)
+    	channel = ManagedChannelBuilder.forAddress("localhost", 9090)
+                .usePlaintext() 
                 .build();
         asyncStub = PaymentServiceGrpc.newStub(channel);
     }
 
-    public void processPayment(String cardNumber, String cardholder, String securityNumber, String issueDate) {
-        // Create a response observer to handle server responses
+    public void processPayment() throws InterruptedException {
+        Scanner scanner = new Scanner(System.in);
+
+        //Giving the option to input the info to the user : 
+        System.out.print("Enter Card Number: ");
+        String cardNumber = scanner.nextLine();
+
+        System.out.print("Enter Cardholder Name: ");
+        String cardholder = scanner.nextLine();
+
+        System.out.print("Enter Security Number: ");
+        String securityNumber = scanner.nextLine();
+
+        System.out.print("Enter Issue Date (MM/YY): ");
+        String issueDate = scanner.nextLine();
+
+        CountDownLatch finishLatch = new CountDownLatch(1);
+
+        // Streamobserver:
         StreamObserver<PaymentResponse> responseObserver = new StreamObserver<PaymentResponse>() {
             @Override
             public void onNext(PaymentResponse response) {
@@ -31,57 +51,50 @@ public class client06 {
             }
 
             @Override
-            public void onError(Throwable t) {
-                // Handle any errors
+            public void onError(Throwable t) {               
                 System.err.println("Error occurred: " + t.getMessage());
+                finishLatch.countDown();
             }
 
             @Override
             public void onCompleted() {
-                // Signal that the response stream is complete
-                System.out.println("Response stream completed.");
+                //Took this from the math example form the exercise in class:
+                System.out.println(LocalTime.now().toString() + ": Stream is completed.");
+                finishLatch.countDown();
             }
         };
 
-        // Create a request observer to send requests to the server
+        // Create a request observer to send requests to the servers
         StreamObserver<PaymentRequest> requestObserver = asyncStub.processPayment(responseObserver);
 
-        try {
-            // Send the payment request
-            requestObserver.onNext(PaymentRequest.newBuilder()
+        try {          
+            PaymentRequest request = PaymentRequest.newBuilder()
                     .setCardNumber(cardNumber)
                     .setCardholder(cardholder)
                     .setSecurityNumber(securityNumber)
                     .setIssueDate(issueDate)
-                    .build());
-            // Complete the request stream
+                    .build();
+            requestObserver.onNext(request);
+
+            // Completing the stream
             requestObserver.onCompleted();
 
-            // Wait for the response
-            // Use more robust synchronization in a real-world scenario
-            Thread.sleep(5000); 
+            // Wait for the server to complete the response handling
+            finishLatch.await(1, TimeUnit.MINUTES);
 
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-            System.err.println("Interrupted while waiting for response: " + e.getMessage());
-        } catch (Exception e) {
-            System.err.println("Exception occurred: " + e.getMessage());
+        } catch (RuntimeException e) {
+            requestObserver.onError(e);
+            throw e;
         } finally {
             // Shutdown the channel
-            channel.shutdown();
+            channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         client06 client = new client06();
 
-        // Sample payment details
-        String cardNumber = "5445 6556 7856 8934";
-        String cardholder = "Regina Salazar ";
-        String securityNumber = "531";
-        String issueDate = "09/26";
-
-        // Process the payment
-        client.processPayment(cardNumber, cardholder, securityNumber, issueDate);
+        // Process the payment with user input
+        client.processPayment();
     }
 }

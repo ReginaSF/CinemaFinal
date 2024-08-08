@@ -74,8 +74,5 @@ public class service03 {
         }
     }
 
-	public static void startS() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

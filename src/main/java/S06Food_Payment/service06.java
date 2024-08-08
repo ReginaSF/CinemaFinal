@@ -1,4 +1,4 @@
-//Bidirectional Straming
+//Bidirectional Streaming
 package S06Food_Payment;
 import java.util.logging.Logger;
 import io.grpc.Server;
@@ -59,9 +59,9 @@ public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
         logger.info("Server_06Food_Payment is working on Port: " + server.getPort());
         System.out.println("Server started, listening on 9090");
 
-        // Keep the server running
+        // maintaining the server running : 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.err.println("Shutting down gRPC server since JVM is shutting down");
+            System.err.println("Shutting down gRPC server");
             server.shutdown();
             System.err.println("Server shut down");
         }));
@@ -69,8 +69,4 @@ public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
         server.awaitTermination();
     }
 
-	public static void startS() {
-		// TODO Auto-generated method stub
-		
-	}
 }

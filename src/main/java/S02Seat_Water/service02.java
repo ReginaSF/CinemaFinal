@@ -39,10 +39,7 @@ public class service02 {
         }
     }
 
-	public static void startS() {
-		// TODO Auto-generated method stub
-		
-	}
+
 }
 
 class S02SeatWaterServiceImpl extends S02SeatWaterGrpc.S02SeatWaterImplBase {
