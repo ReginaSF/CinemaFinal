@@ -41,16 +41,12 @@ public class client02 {
     public static void main(String[] args) {
         // instantiating the client
         client02 client = new client02("localhost", 50051);
-
-        // scanner to receive the req
+      
         Scanner scanner = new Scanner(System.in);
-
-        // checking the input
-        System.out.println("Enter choice ('yes' or 'no'): ");
+        System.out.println("Enter choice ('yes' or 'no'): ");         // checking the input
         String choice = scanner.nextLine();
-
-        // calling the method
-        if ("yes".equalsIgnoreCase(choice) || "no".equalsIgnoreCase(choice)) {
+    
+        if ("yes".equalsIgnoreCase(choice) || "no".equalsIgnoreCase(choice)) {    // calling the method
             client.activateWaterImmersiveFeature(choice);
         } else {
             System.out.println("Invalid choice. Please enter 'yes' or 'no'.");

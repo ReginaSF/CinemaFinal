@@ -5,6 +5,7 @@ import java.util.logging.Logger;
 
 import S01Seat_Heating.Service01;
 import io.grpc.Server;
+import java.util.logging.Logger;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
@@ -14,9 +15,10 @@ public class service02 {
               	Server server = ServerBuilder.forPort(50051)
                 .addService(new S02SeatWaterServiceImpl())
                 .build();
+              	
         public void start() throws Exception {
         server.start();
-     //inserting loggers to be sure the port is connecting:
+     //I am inserting loggers to be sure the port is connecting:
         logger.info("Server_Water is working on Port: " + server.getPort());
         System.out.println("Server_Water is working on Port: " + server.getPort());
     }
@@ -62,5 +64,6 @@ class S02SeatWaterServiceImpl extends S02SeatWaterGrpc.S02SeatWaterImplBase {
 
         responseObserver.onNext(response);
         responseObserver.onCompleted();
+        
     }
 }

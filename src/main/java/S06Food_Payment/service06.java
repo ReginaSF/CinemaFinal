@@ -36,22 +36,20 @@ public class service06 extends PaymentServiceGrpc.PaymentServiceImplBase {
             }
 
             @Override
-            public void onError(Throwable t) {
-                // Handle error
+            public void onError(Throwable t) { //error handling               
                 responseObserver.onError(t);
             }
 
             @Override
             public void onCompleted() {
-                // Complete the stream
-                responseObserver.onCompleted();
+                responseObserver.onCompleted();      // Complete the stream
             }
         };
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
     	final Logger logger = Logger.getLogger(service06.class.getName());
-        // Create and start the gRPC server
+        // Starting the server
         Server server = ServerBuilder.forPort(9090)
                 .addService(new service06())
                 .build()

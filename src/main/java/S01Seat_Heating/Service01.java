@@ -37,8 +37,8 @@ public class Service01 {
             logger.info("Received heating activation request for: " + name);
             System.out.println("Received heating activation request for: " + name);
 
-            responseObserver.onNext(response); // To Return
-            responseObserver.onCompleted();    // Finishes the rpc
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();   
         }
     }
 

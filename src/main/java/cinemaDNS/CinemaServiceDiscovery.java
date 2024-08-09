@@ -36,10 +36,8 @@ private static class SampleListener implements ServiceListener {
 		
 	   try {
 		
-		// Create a JmDNS instance
 		JmDNS jmdns = JmDNS.create(InetAddress.getLocalHost());
-			 
-		// add a service listener
+		
 		jmdns.addServiceListener("_grpc._tcp.local.", 
                                               new SampleListener());
 			 

@@ -12,7 +12,7 @@
     </properties>
 
     <dependencies>
-        <!-- Existing dependencies -->
+        <!-- grpc dependencies -->
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>

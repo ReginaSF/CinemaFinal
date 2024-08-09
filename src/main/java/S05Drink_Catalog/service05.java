@@ -48,7 +48,7 @@ public class service05 {
         server.blockUntilShutdown();
     }
 
-    // Implementation of the DrinkService
+    // Implementing the DrinkService
     static class DrinkServiceImpl extends DrinkServiceGrpc.DrinkServiceImplBase {
 
         @Override

@@ -14,9 +14,9 @@ public class Client01 {
     public static void main(String[] args) throws Exception {
         // Declaring the channel
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091)
-                .usePlaintext() // Use plaintext communication
+                .usePlaintext() 
                 .build();
-        //Unary RPC. We make the request on the blocking stub.
+        //Unary RPC, make the request on the blocking stub.
         CinemaImmersiveBlockingStub stub = CinemaImmersiveGrpc.newBlockingStub(channel);
         ActivateRequest request = ActivateRequest.newBuilder()
                 .setName("A1") // Example seat name
